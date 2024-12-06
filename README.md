@@ -7,7 +7,6 @@ This project allows you to control devices such as lights and fans connected to 
 1. **Hardware**:
    - ESP8266 (e.g., NodeMCU or Wemos D1 Mini)
    - Relays (for controlling lights and fans)
-   - Jumper wires and breadboard
 
 2. **Software**:
    - Arduino IDE with ESP8266 board support
@@ -53,7 +52,7 @@ This project assumes you are using the following pins for controlling devices:
 char ssid[] = "Wi-Fi Name";         // your network SSID (name)
 char password[] = "B8V6VunuVuy&%vyujbyg";  // your network password
 
-#define BOT_TOKEN "1978817624:AAGul0EGuyvLIyS9j1B1VA_EIYBvldOf0pc"
+#define BOT_TOKEN "2976811624:AAGul0EGuyvLIyS9j1B1VA_EIYBvldOq0pc"
 
 const unsigned long BOT_MTBS = 1000; // mean time between scan messages
 
@@ -188,7 +187,7 @@ void handleNewMessages(int numNewMessages) {
       // If the user asks for options
       if (text == F("/options")) {
         String keyboardJson = F("[[{ \"text\" : \"L1 ON\", \"callback_data\" : \"l1-on\" },{ \"text\" : \"L1 OFF\", \"callback_data\" : \"l1-off\" }],[{ \"text\" : \"L2 ON\", \"callback_data\" : \"l2-on\" },{ \"text\" : \"L2 OFF\", \"callback_data\" : \"l2-off\" }],[{ \"text\" : \"L3 ON\", \"callback_data\" : \"l3-on\"},{ \"text\" : \"L3 OFF\", \"callback_data\" : \"l3-off\" }],[{ \"text\" : \"L4 ON\", \"callback_data\" : \"l4-on\" },{ \"text\" : \"L4 OFF\", \"callback_data\" : \"l4-off\" }],[{ \"text\" : \"F1 ON\", \"callback_data\" : \"f1-on\" },{ \"text\" : \"F1 OFF\", \"callback_data\" : \"f1-off\" }],[{ \"text\" : \"F2 ON\", \"callback_data\" : \"f2-on\" },{ \"text\" : \"F2 OFF\", \"callback_data\" : \"f2-off\" }],[{ \"text\" : \"F3 ON\", \"callback_data\" : \"f3-on\" },{ \"text\" : \"F3 OFF\", \"callback_data\" : \"f3-off\" }],[{ \"text\" : \"F4 ON\", \"callback_data\" : \"f4-on\" },{ \"text\" : \"F4 OFF\", \"callback_data\" : \"f4-off\" }]]");
-        bot.sendMessageWithInlineKeyboard(chat_id, "MVGR-GLUG ROOM AUTOMATION BUTTONS(L,F indicate Light,Fan: )", "", keyboardJson);
+        bot.sendMessageWithInlineKeyboard(chat_id, "ROOM AUTOMATION BUTTONS(L,F indicate Light,Fan: )", "", keyboardJson);
       }
 
       // If the user asks for help
