@@ -44,8 +44,6 @@ This project assumes you are using the following pins for controlling devices:
 
 ## Code
 
-### Full Code
-
 ```cpp
 #include <ESP8266WiFi.h>
 #include <WiFiClientSecure.h>
